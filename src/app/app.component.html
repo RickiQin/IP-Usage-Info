@@ -4,4 +4,15 @@
     {{ title }}
   </h1>
 </div>
-
+<table>
+  <tr *ngFor="let arr of addresses">
+    <td *ngFor="let i of arr" id="{{i}}-Item">{{ i }}</td>
+  </tr>
+</table>
+<!-- <div>{{ data }}</div> -->
+<div class='search-box'>
+  <form>
+    <div>Please input ip you want to search: </div>
+    <input matInput [value]="inputIP">
+  </form>
+</div>
